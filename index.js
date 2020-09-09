@@ -42,13 +42,13 @@ i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
 function is31Flavors(num){
    if(originalFlavors.length = 31){
-      console.log(true)
+      return (true)
     }
-    else {console.log(false)}
+    else {return (false)}
   
 
 }
-//is31Flavors(originalFlavors.length)
+//console.log(is31Flavors(originalFlavors.length))
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -64,10 +64,10 @@ For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainb
 function addFlavor(){
 
     originalFlavors.unshift('Rainbow Sherbert')
-    /*code here*/
-   console.log(originalFlavors)
+    
+     return originalFlavors
 }
-//addFlavor(originalFlavors)
+//console.log(addFlavor(originalFlavors))
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -81,10 +81,10 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 
 function removeLastFlavor(/*code here*/){
    originalFlavors.pop()
-    console.log(originalFlavors)
+   return originalFlavors
 
 }
-//removeLastFlavor(originalFlavors)
+//console.log(removeLastFlavor(originalFlavors))
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -97,9 +97,10 @@ For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", a
 
 function getFlavorByIndex(){
     originalFlavors.splice(2,1, "Black Walnut")
-    console.log(originalFlavors)
+   return originalFlavors
 }
-//getFlavorByIndex(originalFlavors)
+//console.log(getFlavorByIndex(originalFlavors))
+
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
 Your function should accept: 
@@ -115,10 +116,10 @@ Hint: You can use .splice() for this
 
 function removeFlavorByName(/*code here*/){
     originalFlavors.splice( 10, 1, "Bubblegum")
-    console.log(originalFlavors)
+   return originalFlavors
 
 }
-//removeFlavorByName(originalFlavors)
+//console.log(removeFlavorByName(originalFlavors))
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
 
@@ -128,13 +129,13 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
+function copy(){
     let OGicecream = [...originalFlavors];
-    console.log(OGicecream)
-    /*code here*/
+    return OGicecream
+  
 
 }
-copy()
+//console.log(copy())
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
 Your function should accept: 
@@ -149,18 +150,18 @@ For example, filterByWord(originalFlavors, "Chocolate") should return ["Chocolat
 DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
-
+var holidayFlavors = []
 function filterByWord( arr,type){
     for(let i = 0; i < arr.length; i++ ) {
             if (arr[i].includes(type)) {
-             // Holidayflavor.push(originalFlavors[i]);
-             console.log(arr[i]);
+             holidayFlavors.push(arr[i])
+             
          }
       }
-   
+   return  holidayFlavors
 
 }
-filterByWord(originalFlavors,'Chocolate')
+//console.log(filterByWord(originalFlavors,'Chocolate'))
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
